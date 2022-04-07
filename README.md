@@ -2,6 +2,7 @@
 # CPU Set Mode
 CPU Set Mode is a simple tool to set the speed of the CPU. It helps save power on laptops and get the most out of a system where power usage isn't a concern.
 
+Note that this software isn't particularily good, but it does seem to work.
 
 ## Usage
 To set the cpu mode, use the following command:
