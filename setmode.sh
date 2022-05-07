@@ -49,4 +49,9 @@ case $1 in
 esac
 
 echo "setting cpu to $governor governor at $freq_low - $freq_high"
-sudo cpufreq-set -r --governor $governor --min $freq_low --max $freq_high
+
+numCores=$(nproc)
+
+for i in $(seq 0 $((numCores-1))); do
+    sudo cpufreq-set -c $i -g $governor -d $freq_low -u $freq_high
+done
